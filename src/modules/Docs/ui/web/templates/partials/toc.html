@@ -1,0 +1,32 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     TABLE OF CONTENTS — Right-side on-page navigation
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<%
+  var tocEntries = (page.toc || []).filter(function(e) { return e.level === 2 || e.level === 3; });
+%>
+<% if (tocEntries.length > 0) { %>
+<nav class="toc" aria-label="On this page">
+  <p class="toc-title">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
+      <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+    </svg>
+    On this page
+  </p>
+  <ul class="toc-list">
+    <% tocEntries.forEach(function(entry) { %>
+    <li class="toc-depth-<%= entry.level - 2 %>">
+      <a href="#<%= entry.id %>" class="toc-link"><%= entry.text %></a>
+      <% if (entry.children && entry.children.filter(function(c){ return c.level===3; }).length > 0) { %>
+      <ul class="toc-sub">
+        <% entry.children.filter(function(c){ return c.level===3; }).forEach(function(child) { %>
+        <li><a href="#<%= child.id %>" class="toc-link"><%= child.text %></a></li>
+        <% }) %>
+      </ul>
+      <% } %>
+    </li>
+    <% }) %>
+  </ul>
+</nav>
+<% } %>

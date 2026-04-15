@@ -1,0 +1,16 @@
+{
+  "_cachedAt": "2026-04-01T12:23:55.587Z",
+  "_files": [
+    "app",
+    "auth",
+    "cache",
+    "database",
+    "logging",
+    "mail",
+    "queue",
+    "security",
+    "session",
+    "site",
+    "storage"
+  ]
+}

@@ -1,0 +1,36 @@
+@import
+ { site } from '@/config/site'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+@yield('title')
+</title>
+  <meta name="description" content="
+@yield('description')
+">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="<%= site.cdn.fonts %>" rel="stylesheet">
+  <!-- highlight.js: dark theme default, github light for light-mode -->
+  <link id="hljs-dark" rel="stylesheet" href="<%= site.cdn.hljsDark %>">
+  <link id="hljs-light" rel="stylesheet" href="<%= site.cdn.hljsLight %>" disabled>
+@yield('styles')
+@yield('head')
+  <!-- Prevent flash of unstyled content when light theme is stored -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('<%= site.themeStorageKey %>');
+      if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <script defer src="<%= site.cdn.alpine %>"></script>
+</head>
+<body 
+@yield('body-attrs')
+>
+@yield('body')
+@yield('scripts')
+</body>
+</html>

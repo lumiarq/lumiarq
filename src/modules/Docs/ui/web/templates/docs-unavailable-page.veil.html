@@ -1,0 +1,68 @@
+@vars({})
+@extends('layouts/docs-page-layout')
+
+@import
+{ site } from '@/config/site'
+@section('title')
+  @t('docs.unavailable_title')
+  — LumiARQ
+@endsection
+@section('styles')
+  @styles('style.css')
+@endsection
+@section('body-attrs')
+  :class="{ 'sidebar-open': sidebarOpen }"
+  x-data="{
+    theme: localStorage.getItem('<%= site.themeStorageKey %>') || 'dark',
+    sidebarOpen: false,
+    searchOpen: false,
+    init() {
+      this.applyTheme(this.theme);
+      this.$watch('theme', t => { localStorage.setItem('<%= site.themeStorageKey %>', t); this.applyTheme(t); });
+    },
+    applyTheme(t) {
+      t === 'light'
+        ? document.documentElement.setAttribute('data-theme', 'light')
+        : document.documentElement.removeAttribute('data-theme');
+      var dark = document.getElementById('hljs-dark');
+      var light = document.getElementById('hljs-light');
+      if (dark && light) { dark.disabled = (t === 'light'); light.disabled = (t !== 'light'); }
+    },
+    toggleTheme() { this.theme = this.theme === 'light' ? 'dark' : 'light'; }
+  }"
+
+
+
+  @keydown
+  .escape.window="sidebarOpen = false; searchOpen = false"
+@endsection
+@section('body')
+  <div class="ambient-glow"></div>
+
+
+
+  @include('partials/docs-header')
+  @include('partials/search-modal')
+  @include('partials/sidebar-overlay')
+  <main class="docs-unavailable mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <section class="docs-unavailable-card mx-auto w-full max-w-2xl" role="status">
+      <h1 class="unavailable-title">
+
+  @t('docs.unavailable_title')
+  </h1>
+        <p class="unavailable-message">
+
+  @t('docs.unavailable_message')
+  </p>
+        <a href="<%= site.nav.home %>" class="unavailable-link">
+
+
+  @t('docs.back_home')
+      </a>
+    </section>
+  </main>
+@endsection
+@section('scripts')
+  @scripts('app.js')
+  @scripts('docs.js')
+@endsection

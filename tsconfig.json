@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/shared/*": ["./src/shared/*"],
+      "@/bootstrap/*": ["./bootstrap/*"],
+      "@/storage/*": ["./storage/*"],
+      "@/config/*": ["./config/*"],
+      "@/tests/*": ["./tests/*"],
+      "@/lang/*": ["./lang/*"]
+    },
+    "outDir": "./dist",
+    "rootDir": ".",
+    "skipLibCheck": true
+  },
+  "include": ["src", "src/modules", "src/shared", "bootstrap", "storage", "config", "tests", "lang"],
+  "exclude": ["node_modules", "dist"]
+}

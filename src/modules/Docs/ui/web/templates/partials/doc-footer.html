@@ -1,0 +1,17 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     DOC FOOTER — Reading time + Edit on GitHub
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<div class="doc-footer">
+  <% if (page.readingTime) { %>
+  <span class="reading-time"><%= page.readingTime %> 
+@t('page.min_read')
+</span>
+  <% } %>
+  <a href="<%= editOnGithub %>" class="edit-on-github" target="_blank" rel="noopener noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5m-1.414-9.414a2 2 0 1 1 2.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+    </svg>
+@t('page.edit_on_github')
+  </a>
+</div>

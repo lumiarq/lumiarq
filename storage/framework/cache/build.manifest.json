@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-04-01T12:33:47.540Z",
+  "version": 1,
+  "routeFiles": 3,
+  "totalRoutes": 6,
+  "modules": {
+    "Docs": {
+      "files": [
+        {
+          "routeFile": "src/modules/Docs/http/routes/docs.api.ts",
+          "type": "api",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/api/docs",
+              "handler": "DocsListApiHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Docs"
+            },
+            {
+              "method": "GET",
+              "path": "/api/search-index",
+              "handler": "SearchIndexApiHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Docs"
+            }
+          ]
+        },
+        {
+          "routeFile": "src/modules/Docs/http/routes/docs.web.ts",
+          "type": "web",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/docs",
+              "handler": "DocsPageHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Docs"
+            },
+            {
+              "method": "GET",
+              "path": "/docs/:version",
+              "handler": "DocsPageHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Docs"
+            },
+            {
+              "method": "GET",
+              "path": "/docs/:version/:slug",
+              "handler": "DocsPageHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Docs"
+            }
+          ]
+        }
+      ]
+    },
+    "Welcome": {
+      "files": [
+        {
+          "routeFile": "src/modules/Welcome/http/routes/welcome.web.ts",
+          "type": "web",
+          "routes": [
+            {
+              "method": "GET",
+              "path": "/",
+              "handler": "WelcomeHandler",
+              "middleware": "—",
+              "render": "static",
+              "module": "Welcome"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

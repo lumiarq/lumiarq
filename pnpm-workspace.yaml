@@ -1,0 +1,9 @@
+packages:
+  - "."
+  - "../framework/packages/framework"
+  - "../framework/packages/illumiarq/*"
+  - "../framework/packages/lumis"
+  - "../framework/packages/tools/*"
+allowBuilds:
+  esbuild: true
+  argon2: true

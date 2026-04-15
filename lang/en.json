@@ -1,0 +1,42 @@
+{
+  "auth.failed": "These credentials do not match our records.",
+  "auth.throttle": "Too many login attempts. Please try again in :seconds seconds.",
+  "auth.logout": "You have been logged out.",
+  "validation.required": "The :field field is required.",
+  "validation.email": "The :field must be a valid email address.",
+  "validation.min": "The :field must be at least :min characters.",
+  "validation.confirmed": "The :field confirmation does not match.",
+  "errors.not_found": "The requested resource was not found.",
+  "errors.unauthorized": "Unauthorized.",
+  "errors.forbidden": "This action is not allowed.",
+  "errors.server": "An unexpected error occurred. Please try again.",
+
+  "nav.documentation": "Documentation",
+  "nav.github": "GitHub",
+  "nav.get_started": "Get Started",
+
+  "aria.documentation_nav": "Documentation navigation",
+  "aria.theme_toggle": "Toggle theme",
+  "aria.toggle_nav": "Toggle navigation",
+  "aria.search": "Search documentation",
+  "aria.search_dialog": "Search",
+
+  "page.min_read": "min read",
+  "page.on_this_page": "On this page",
+  "page.prev": "Previous",
+  "page.next": "Next",
+  "page.search_placeholder": "Search docs",
+  "page.search_shortcut": "⌘K",
+  "page.no_results": "No results for",
+  "page.edit_on_github": "Edit this page on GitHub",
+
+  "version.current": "v1",
+  "version.label": "Version",
+
+  "docs.version_selector": "Version",
+  "docs.version_label": "Version:",
+
+  "docs.unavailable_title": "Documentation Unavailable",
+  "docs.unavailable_message": "The documentation service is temporarily unreachable. Please try again in a moment.",
+  "docs.back_home": "← Back to home"
+}

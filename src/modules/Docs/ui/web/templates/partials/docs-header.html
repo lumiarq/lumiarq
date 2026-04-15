@@ -1,0 +1,65 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     DOCS HEADER / NAVIGATION
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<header class="site-header">
+  <a href="<%= site.nav.home %>" class="site-logo">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+      <path d="M2 17l10 5 10-5"/>
+      <path d="M2 12l10 5 10-5"/>
+    </svg>
+    <%- site.logoHtml %>
+  </a>
+
+  <nav class="header-nav" aria-label="
+@t('aria.documentation_nav')
+">
+    <a href="<%= site.nav.docs %>">
+@t('nav.documentation')
+</a>
+    <a href="<%= site.github %>" target="_blank" rel="noopener">
+@t('nav.github')
+</a>
+
+    <button 
+@click
+="searchOpen = true" class="icon-btn search-btn" aria-label="
+@t('aria.search')
+">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </button>
+
+    <button 
+@click
+="toggleTheme()" class="icon-btn" aria-label="
+@t('aria.theme_toggle')
+">
+      <svg class="icon-moon" x-show="theme === 'dark'" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="icon-sun" x-show="theme === 'light'" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+
+    <a href="<%= site.nav.installation %>" class="btn-primary">
+@t('nav.get_started')
+</a>
+  </nav>
+
+  <button 
+@click
+="sidebarOpen = !sidebarOpen" class="hamburger-btn" aria-label="
+@t('aria.toggle_nav')
+">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="5" x2="17" y2="5"/><line x1="3" y1="10" x2="17" y2="10"/><line x1="3" y1="15" x2="17" y2="15"/>
+    </svg>
+  </button>
+</header>

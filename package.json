@@ -1,0 +1,57 @@
+{
+  "name": "lumiarq",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run build:css && pnpm run build:node",
+    "dev": "lumis serve",
+    "build:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --minify",
+    "dev:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --watch",
+    "build:node": "esbuild bootstrap/entry.ts --bundle --platform=node --target=node20 --format=esm --outfile=.arc/node/app.js --packages=external --tsconfig=tsconfig.json",
+    "build:cloudflare": "esbuild bootstrap/entry.ts --bundle --platform=browser --target=esnext --format=esm --outfile=.arc/cf-worker/worker.js --packages=external --tsconfig=tsconfig.json",
+    "build:static": "esbuild bootstrap/entry.ts --bundle --platform=node --target=node20 --format=esm --outfile=.arc/static/app.js --packages=external --tsconfig=tsconfig.json",
+    "preview:node": "node --env-file=.env .arc/.server.mjs",
+    "preview:static": "node --env-file=.env .arc/.server.mjs",
+    "preview:cloudflare": "echo 'Deploy .arc/cf-worker/worker.js to Cloudflare via wrangler'",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src bootstrap config --ext .ts",
+    "tc": "tsc --noEmit",
+    "prepare": "husky",
+    "format": "pnpm run format:bootstrap && pnpm run format:config && pnpm run format:src && pnpm run format:tests",
+    "format:bootstrap": "prettier --write \"bootstrap/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:config": "prettier --write \"config/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:src": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:tests": "prettier --write \"tests/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css}\""
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "argon2",
+      "vue-demi"
+    ]
+  },
+  "dependencies": {
+    "@lumiarq/framework": "workspace:*",
+    "drizzle-orm": "^0.45.1"
+  },
+  "devDependencies": {
+    "@lumiarq/eslint-plugin": "workspace:*",
+    "@lumiarq/lumis": "workspace:*",
+    "@lumiarq/prettier-plugin-veil": "workspace:*",
+    "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^22.19.17",
+    "@vitest/coverage-v8": "^1.4.0",
+    "esbuild": "^0.25.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.7.4",
+    "tailwindcss": "4.2.2",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0",
+    "zod": "^3.24.1"
+  }
+}

@@ -1,0 +1,66 @@
+@vars({ version: string, environment: string, appName: string, isLocal: boolean })
+@extends('layouts/base-layout')
+
+@section('title')
+  Welcome — <%= appName %>
+@endsection
+@section('head')
+  <meta name="robots" content="noindex, nofollow">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+@endsection
+@section('styles')
+  @styles('style.css')
+  @styles('_legacy-style.css')
+@endsection
+@section('body')
+  <div class="spotlight"></div>
+
+  <main class="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="header mx-auto max-w-3xl text-center">
+      <div class="logo-container">
+        <svg class="logo-mark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/>
+        </svg>
+      </div>
+      <h1><%= appName %></h1>
+      <p style="color: var(--text-muted)">A web framework that expresses your artistry.</p>
+      <div class="version-tag"><%= environment %> v<%= version %></div>
+    </div>
+
+    <div class="grid mt-8 grid-cols-1 gap-5 md:grid-cols-2">
+      <a href="/docs" class="card">
+        <div class="icon-box">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h2>Documentation</h2>
+        <p>LumiARQ has wonderful documentation covering every aspect of the framework.</p>
+      </a>
+
+      <a href="https://github.com/lumiarq/lumiarq" class="card">
+        <div class="icon-box">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </div>
+        <h2>GitHub</h2>
+        <p>Explore the source code, contribute, or star the repository to show support.</p>
+      </a>
+
+      <div class="card md:col-span-2">
+        <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+          <div>
+            <h2>Getting Started</h2>
+            <p>Ready to build? Edit <code style="color: var(--accent)">src/modules/Welcome</code> to start your journey.</p>
+          </div>
+          <% if (isLocal) { %><code style="background: #030712; padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid var(--border); font-size: 0.7rem;" class="max-w-full overflow-x-auto">lumis make:module Home</code><% } %>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      LumiARQ JS &copy; <%= new Date().getFullYear() %> &mdash; Optimized for performance.
+    </footer>
+  </main>
+@endsection

@@ -1,0 +1,173 @@
+/* ── Theme variables ────────────────────────────────────────────── */
+:root {
+  --accent: #ff2d20;
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --border: rgba(51, 65, 85, 0.5);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+/* ── Resets ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body ───────────────────────────────────────────────────────── */
+body {
+  background-color: #030712;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.2) 0, transparent 50%);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Spotlight ──────────────────────────────────────────────────── */
+.spotlight {
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 45, 32, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Layout ─────────────────────────────────────────────────────── */
+main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.logo-mark {
+  height: 56px;
+  width: auto;
+  fill: var(--accent);
+  filter: drop-shadow(0 0 15px rgba(255, 45, 32, 0.3));
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
+  background: linear-gradient(to bottom, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Grid & cards ───────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: rgba(255, 45, 32, 0.4);
+  transform: translateY(-2px);
+}
+
+.card:hover .icon-box {
+  background: var(--accent);
+  color: white;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background: #1e293b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--accent);
+  transition: background 0.3s;
+}
+
+.card h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* ── Version tag ────────────────────────────────────────────────── */
+.version-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 45, 32, 0.1);
+  color: var(--accent);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+}

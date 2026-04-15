@@ -1,0 +1,96 @@
+@vars({ page: DocsPageData, nav: DocNav, activeVersion: DocVersion, versions: DocVersion[], editOnGithub: string })
+@extends('layouts/docs-page-layout')
+
+@import
+{ site } from '@/config/site'
+@import
+type { DocsPageData } from '@/modules/Docs/ui/web/types/page.types'
+@import
+type { DocNav, DocVersion } from '@/modules/Docs/contracts/types/docs.types'
+@import
+{ SECTION_ICONS, DEFAULT_ICON } from '@/modules/Docs/ui/web/pages/includes/sidebar'
+@section('title')
+  <%= page.frontmatter.title %> — LumiARQ
+@endsection
+@section('description')
+  <%= page.frontmatter.description ?? '' %>
+@endsection
+@section('styles')
+  @styles('style.css')
+@endsection
+@section('body-attrs')
+  :class="{ 'sidebar-open': sidebarOpen }"
+  x-data="{
+    theme: localStorage.getItem('<%= site.themeStorageKey %>') || 'dark',
+    sidebarOpen: false,
+    searchOpen: false,
+    init() {
+      this.applyTheme(this.theme);
+      this.$watch('theme', t => { localStorage.setItem('<%= site.themeStorageKey %>', t); this.applyTheme(t); });
+    },
+    applyTheme(t) {
+      t === 'light'
+        ? document.documentElement.setAttribute('data-theme', 'light')
+        : document.documentElement.removeAttribute('data-theme');
+      var dark = document.getElementById('hljs-dark');
+      var light = document.getElementById('hljs-light');
+      if (dark && light) { dark.disabled = (t === 'light'); light.disabled = (t !== 'light'); }
+    },
+    toggleTheme() { this.theme = this.theme === 'light' ? 'dark' : 'light'; }
+  }"
+
+
+  @keydown
+  .escape.window="sidebarOpen = false; searchOpen = false"
+@endsection
+@section('body')
+  <div class="ambient-glow"></div>
+
+
+
+
+
+  @include('partials/docs-header')
+  @include('partials/search-modal')
+  @include('partials/sidebar-overlay')
+  <div class="layout mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+    <nav class="sidebar" 
+
+
+
+
+  @click
+  ="if($event.target.closest('.sidebar-link')) sidebarOpen = false"
+           aria-label="
+
+
+
+  @t('aria.documentation_nav')
+  "
+      > 
+
+
+
+  @include('partials/sidebar')
+  </nav>
+
+  <main class="main min-w-0">
+    <article class="mx-auto w-full max-w-3xl"><%- page.html %></article>
+
+
+
+
+  @include('partials/doc-footer')
+  </main>
+
+
+
+
+
+  @include('partials/toc')
+  </div>
+@endsection
+@section('scripts')
+  @scripts('app.js')
+  @scripts('docs.js')
+@endsection

@@ -1,0 +1,42 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SIDEBAR — Version selector + navigation sections
+     ═══════════════════════════════════════════════════════════════════════════ -->
+
+<% if (versions.length > 1) { %>
+<div class="version-selector">
+  <label class="version-label" for="version-switcher">
+@t('docs.version_label')
+</label>
+  <select id="version-switcher" class="version-select"
+          onchange="window.location.pathname = '/docs/' + this.value">
+    <% versions.forEach(function(v) { %>
+    <option value="<%= v %>"<%= v === activeVersion ? ' selected' : '' %>><%= v %></option>
+    <% }) %>
+  </select>
+</div>
+<% } %>
+
+<% nav.sections.forEach(function(section) { %>
+<details class="sidebar-section"<%= section.hasActive ? ' open' : '' %>>
+  <summary class="sidebar-summary">
+    <span class="sidebar-summary-content">
+      <span class="sidebar-section-icon"><%- SECTION_ICONS[section.title] ?? DEFAULT_ICON %></span>
+      <span><%= section.title %></span>
+    </span>
+    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 2l4 4-4 4"/>
+    </svg>
+  </summary>
+  <ul class="sidebar-list">
+    <% section.items.forEach(function(item) { %>
+    <li>
+      <a href="<%= item.href %>"
+         class="sidebar-link<%= item.current ? ' active' : '' %>"
+         <%= item.current ? 'aria-current="page"' : '' %>
+      ><%= item.title %></a>
+    </li>
+    <% }) %>
+  </ul>
+</details>
+<% }) %>
