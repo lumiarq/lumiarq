@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@lumiarq/framework':
         specifier: ^1.0.0
-        version: 1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))
+        version: 1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))
       '@trazze/ignite':
         specifier: ^0.1.0
         version: 0.1.0
@@ -19,8 +19,8 @@ importers:
         version: 0.45.1(@libsql/client@0.17.0)(gel@2.2.0)
     devDependencies:
       '@illumiarq/lumis':
-        specifier: ^1.2.3
-        version: 1.2.3(alpinejs@3.15.8)
+        specifier: ^1.2.4
+        version: 1.2.4(alpinejs@3.15.8)
       '@lumiarq/eslint-plugin':
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.39.4(jiti@2.6.1))
@@ -2271,8 +2271,8 @@ packages:
     resolution: {integrity: sha512-+nagKAuAb5y9YgzLgidCKwzvZaqqt8kNGbI+TLkHAksmyLY4ieXlx43LwRKjw3jm59BbS8xaypx0yYmZL2Qdqg==}
     hasBin: true
 
-  '@illumiarq/lumis@1.2.3':
-    resolution: {integrity: sha512-bMwwAhPII/haMdNEGgyhNkXzHNJq6jdNdn9LJPKQjCDNBo5Zn7ZOAW6woJ8MelFOiDd6LKRdUhktvg97b/GlXg==}
+  '@illumiarq/lumis@1.2.4':
+    resolution: {integrity: sha512-lqQR3Dwn2WygRbgatMi0kwEodtsSFm+p3/U+nXSFpsrVWAj9OOg3W3TCMOIrz0cIHFADg2IyrdeXq66X3bMoDA==}
     hasBin: true
 
   '@illumiarq/migrations@1.0.0':
@@ -3640,6 +3640,9 @@ packages:
   devalue@5.6.4:
     resolution: {integrity: sha512-Gp6rDldRsFh/7XuouDbxMH3Mx8GMCcgzIb1pDTvNyn8pZGQ22u+Wa+lGV9dQCltFQ7uVw0MhRyb8XDskNFOReA==}
 
+  devalue@5.7.1:
+    resolution: {integrity: sha512-MUbZ586EgQqdRnC4yDrlod3BEdyvE4TapGYHMW2CiaW+KkkFmWEFqBUaLltEZCGi0iFXCEjRF0OjF0DV2QHjOA==}
+
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3949,6 +3952,14 @@ packages:
 
   esrap@2.2.4:
     resolution: {integrity: sha512-suICpxAmZ9A8bzJjEl/+rLJiDKC0X4gYWUxT6URAWBLvlXmtbZd5ySMu/N2ZGEtMCAmflUDPSehrP9BQcsGcSg==}
+
+  esrap@2.2.5:
+    resolution: {integrity: sha512-/yLB1538mag+dn0wsePTe8C0rDIjUOaJpMs2McodSzmM2msWcZsBSdRtg6HOBt0A/r82BN+Md3pgwSc/uWt2Ig==}
+    peerDependencies:
+      '@typescript-eslint/types': ^8.2.0
+    peerDependenciesMeta:
+      '@typescript-eslint/types':
+        optional: true
 
   esrecurse@4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
@@ -6525,7 +6536,7 @@ snapshots:
     transitivePeerDependencies:
       - alpinejs
 
-  '@illumiarq/lumis@1.2.3(alpinejs@3.15.8)':
+  '@illumiarq/lumis@1.2.4(alpinejs@3.15.8)':
     dependencies:
       '@illumiarq/adapters': 1.0.0
       '@illumiarq/auth-starter': 1.0.1
@@ -6574,6 +6585,19 @@ snapshots:
   '@illumiarq/modules@1.0.0':
     dependencies:
       '@illumiarq/contracts': 1.0.0
+
+  '@illumiarq/query@1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))':
+    dependencies:
+      '@illumiarq/core': 1.0.0
+      '@illumiarq/http': 1.0.0
+      zod: 3.25.76
+    optionalDependencies:
+      '@tanstack/react-query': 5.90.21(react@19.2.4)
+      '@tanstack/solid-query': 5.90.26(solid-js@1.9.11)
+      '@tanstack/vue-query': 5.92.9(vue@3.5.30(typescript@5.9.3))
+      react: 19.2.4
+      svelte: 5.53.13(@typescript-eslint/types@8.59.0)
+      vue: 3.5.30(typescript@5.9.3)
 
   '@illumiarq/query@1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))':
     dependencies:
@@ -6750,6 +6774,65 @@ snapshots:
   '@lumiarq/eslint-plugin@1.0.0(eslint@9.39.4(jiti@2.6.1))':
     dependencies:
       eslint: 9.39.4(jiti@2.6.1)
+
+  '@lumiarq/framework@1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))':
+    dependencies:
+      '@illumiarq/adapters': 1.0.0
+      '@illumiarq/auth': 1.0.0
+      '@illumiarq/build': 1.0.0
+      '@illumiarq/cache': 1.0.0
+      '@illumiarq/context': 1.0.0
+      '@illumiarq/contracts': 1.0.0
+      '@illumiarq/core': 1.0.0
+      '@illumiarq/database': 1.0.0(@types/react@19.2.14)(react@19.2.4)
+      '@illumiarq/http': 1.0.0
+      '@illumiarq/migrations': 1.0.0(@types/react@19.2.14)(react@19.2.4)
+      '@illumiarq/modules': 1.0.0
+      '@illumiarq/query': 1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))
+      '@illumiarq/runtime': 1.0.0
+      '@illumiarq/testing': 1.0.0
+      '@illumiarq/tinker': 1.0.0
+      '@illumiarq/veil': 1.0.0(alpinejs@3.15.8)
+      '@lumiarq/lumis': 1.2.0
+      '@trazze/sdk': 0.1.0
+    transitivePeerDependencies:
+      - '@aws-sdk/client-rds-data'
+      - '@cloudflare/workers-types'
+      - '@electric-sql/pglite'
+      - '@libsql/client-wasm'
+      - '@neondatabase/serverless'
+      - '@op-engineering/op-sqlite'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@prisma/client'
+      - '@tanstack/react-query'
+      - '@tanstack/solid-query'
+      - '@tanstack/vue-query'
+      - '@tidbcloud/serverless'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/sql.js'
+      - '@vercel/postgres'
+      - '@xata.io/client'
+      - alpinejs
+      - better-sqlite3
+      - bufferutil
+      - bun-types
+      - encoding
+      - expo-sqlite
+      - knex
+      - kysely
+      - mysql2
+      - pg
+      - postgres
+      - prisma
+      - react
+      - sql.js
+      - sqlite3
+      - svelte
+      - utf-8-validate
+      - vue
 
   '@lumiarq/framework@1.0.0(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))':
     dependencies:
@@ -8137,6 +8220,9 @@ snapshots:
 
   devalue@5.6.4: {}
 
+  devalue@5.7.1:
+    optional: true
+
   diff-sequences@29.6.3: {}
 
   dir-glob@3.0.1:
@@ -8404,6 +8490,13 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@typescript-eslint/types': 8.57.1
+
+  esrap@2.2.5(@typescript-eslint/types@8.59.0):
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+    optionalDependencies:
+      '@typescript-eslint/types': 8.59.0
+    optional: true
 
   esrecurse@4.3.0:
     dependencies:
@@ -9293,6 +9386,28 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.21
       zimmerframe: 1.1.4
+
+  svelte@5.53.13(@typescript-eslint/types@8.59.0):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@jridgewell/sourcemap-codec': 1.5.5
+      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
+      '@types/estree': 1.0.8
+      '@types/trusted-types': 2.0.7
+      acorn: 8.16.0
+      aria-query: 5.3.1
+      axobject-query: 4.1.0
+      clsx: 2.1.1
+      devalue: 5.7.1
+      esm-env: 1.2.2
+      esrap: 2.2.5(@typescript-eslint/types@8.59.0)
+      is-reference: 3.0.3
+      locate-character: 3.0.0
+      magic-string: 0.30.21
+      zimmerframe: 1.1.4
+    transitivePeerDependencies:
+      - '@typescript-eslint/types'
+    optional: true
 
   svix@1.90.0:
     dependencies:
