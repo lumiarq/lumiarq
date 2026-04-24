@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:node",
+    "build:vercel": "pnpm lumis route:cache && pnpm lumis view:cache && pnpm lumis search:index && pnpm run build:css && pnpm run build:node",
     "dev": "lumis serve",
     "build:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --minify",
     "dev:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --watch",
@@ -35,13 +36,14 @@
     ]
   },
   "dependencies": {
-    "@lumiarq/framework": "workspace:*",
+    "@lumiarq/framework": "^1.0.0",
+    "@trazze/ignite": "^0.1.0",
     "drizzle-orm": "^0.45.1"
   },
   "devDependencies": {
-    "@lumiarq/eslint-plugin": "workspace:*",
-    "@lumiarq/lumis": "workspace:*",
-    "@lumiarq/prettier-plugin-veil": "workspace:*",
+    "@illumiarq/lumis": "^1.2.2",
+    "@lumiarq/eslint-plugin": "^1.0.0",
+    "@lumiarq/prettier-plugin-veil": "^1.0.0",
     "@tailwindcss/cli": "^4.2.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^22.19.17",

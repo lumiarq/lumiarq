@@ -5,3 +5,5 @@ coverage/
 .env
 .env.*
 *.local
+
+/src/modules/Docs/github-docs-source.ts
