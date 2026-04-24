@@ -7,3 +7,4 @@ coverage/
 *.local
 
 /src/modules/Docs/github-docs-source.ts
+.vercel

@@ -1,12 +1,20 @@
-import appPromise from '../.arc/node/app.js';
-import { handle } from 'hono/vercel';
+// api/stdin-entry.js
+import appPromise from "../.arc/node/app.js";
 
-const app = await appPromise;
-const router = app?.router ?? app;
+// node_modules/.pnpm/hono@4.12.8/node_modules/hono/dist/adapter/vercel/handler.js
+var handle = (app2) => (req) => {
+  return app2.fetch(req);
+};
 
-if (!router || typeof router.fetch !== 'function') {
-  throw new Error('LumiARQ Vercel adapter expected a Hono app at app.router.');
+// api/stdin-entry.js
+var app = await appPromise;
+var router = app?.router ?? app;
+if (!router || typeof router.fetch !== "function") {
+  throw new Error("LumiARQ Vercel adapter expected a Hono app at app.router.");
 }
-
-export const config = { runtime: 'nodejs' };
-export default handle(router);
+var config = { runtime: "nodejs" };
+var stdin_entry_default = handle(router);
+export {
+  config,
+  stdin_entry_default as default
+};
