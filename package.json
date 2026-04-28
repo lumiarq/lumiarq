@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:node",
-    "build:vercel": "pnpm lumis route:cache && pnpm lumis view:cache && pnpm lumis search:index && pnpm run build:css && pnpm lumis build --target vercel",
+    "build:vercel": "pnpm lumis route:cache && pnpm lumis view:cache && pnpm lumis search:index && pnpm run build:css && pnpm run build:vercel-bundle",
+    "build:vercel-bundle": "esbuild bootstrap/vercel.ts --bundle --platform=node --target=node20 --format=esm --outfile=api/index.js --external:argon2 --tsconfig=tsconfig.json",
     "dev": "lumis serve",
     "build:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --minify",
     "dev:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --watch",
@@ -18,14 +19,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint src bootstrap config --ext .ts",
+    "lint": "eslint src bootstrap --ext .ts",
     "tc": "tsc --noEmit",
     "prepare": "husky",
     "format": "pnpm run format:bootstrap && pnpm run format:config && pnpm run format:src && pnpm run format:tests",
     "format:bootstrap": "prettier --write \"bootstrap/**/*.{js,jsx,ts,tsx,json,css}\"",
-    "format:config": "prettier --write \"config/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:config": "prettier --write \"src/config/**/*.{js,jsx,ts,tsx,json,css}\"",
     "format:src": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css}\"",
-    "format:tests": "prettier --write \"tests/**/*.{js,jsx,ts,tsx,json,css}\"",
+    "format:tests": "prettier --write \"src/tests/**/*.{js,jsx,ts,tsx,json,css}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css}\""
   },
   "pnpm": {
@@ -36,7 +37,8 @@
     ]
   },
   "dependencies": {
-    "@lumiarq/framework": "^1.0.0",
+    "@illumiarq/adapters": "^1.1.0",
+    "@lumiarq/framework": "^1.0.1",
     "@trazze/ignite": "^0.1.0",
     "drizzle-orm": "^0.45.1"
   },

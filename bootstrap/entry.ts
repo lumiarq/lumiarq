@@ -1,4 +1,7 @@
+console.log('ENTRY START')
+
 import { boot } from "@lumiarq/framework"
+import { handleIgnitionError } from "@trazze/ignite"
 
 /** Import bootstrap files — ensures bundler includes them for all targets */
 import "./env"
@@ -22,7 +25,9 @@ import "@/storage/framework/cache/routes.loader"
  *   --target cloudflare: createCloudflareAdapter(app)  → { fetch: handler }
  *   --target static:     createStaticAdapter(app)      → prerender pipeline
  */
-export default boot()
+export default boot({
+  onError: handleIgnitionError,
+})
 
 /**
  * Uncomment to hook into the boot sequence:
