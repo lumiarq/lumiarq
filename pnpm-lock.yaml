@@ -22,8 +22,8 @@ importers:
         version: 0.45.1(@libsql/client@0.17.0)(gel@2.2.0)
     devDependencies:
       '@illumiarq/lumis':
-        specifier: ^1.2.7
-        version: 1.2.7(alpinejs@3.15.8)
+        specifier: ^1.2.8
+        version: 1.2.8(alpinejs@3.15.8)
       '@lumiarq/eslint-plugin':
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.39.4(jiti@2.6.1))
@@ -2280,8 +2280,8 @@ packages:
     resolution: {integrity: sha512-+nagKAuAb5y9YgzLgidCKwzvZaqqt8kNGbI+TLkHAksmyLY4ieXlx43LwRKjw3jm59BbS8xaypx0yYmZL2Qdqg==}
     hasBin: true
 
-  '@illumiarq/lumis@1.2.7':
-    resolution: {integrity: sha512-CJR+BXTlFVbSA7jBSUVev7vBtW1cSDXgN1hjwrPoEfAqF7ozNOENLhYS0EtNpqQ0yCYY3Jyfr80konQaoSqnOw==}
+  '@illumiarq/lumis@1.2.8':
+    resolution: {integrity: sha512-LfRpa39nRDohXoD6cEypqtfeCoFvu35DZo0jXMxf3cottPmoeZVcsxQnb+bwDaIxbUqbD/hcAgQEqfkrYVAmdQ==}
     hasBin: true
 
   '@illumiarq/migrations@1.0.0':
@@ -6584,7 +6584,7 @@ snapshots:
     transitivePeerDependencies:
       - alpinejs
 
-  '@illumiarq/lumis@1.2.7(alpinejs@3.15.8)':
+  '@illumiarq/lumis@1.2.8(alpinejs@3.15.8)':
     dependencies:
       '@illumiarq/adapters': 1.1.1
       '@illumiarq/auth-starter': 1.0.1
