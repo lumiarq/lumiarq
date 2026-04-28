@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@illumiarq/adapters':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^1.1.1
+        version: 1.1.1
       '@lumiarq/framework':
         specifier: ^1.0.1
         version: 1.0.1(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))
@@ -22,8 +22,8 @@ importers:
         version: 0.45.1(@libsql/client@0.17.0)(gel@2.2.0)
     devDependencies:
       '@illumiarq/lumis':
-        specifier: ^1.2.5
-        version: 1.2.5(alpinejs@3.15.8)
+        specifier: ^1.2.7
+        version: 1.2.7(alpinejs@3.15.8)
       '@lumiarq/eslint-plugin':
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.39.4(jiti@2.6.1))
@@ -2237,6 +2237,9 @@ packages:
   '@illumiarq/adapters@1.1.0':
     resolution: {integrity: sha512-uzzn3+WtCBk1LXCTSWmDAeU6m2zyDDwn8/WT4bLE9gReGhVMLej4zws1cNo5N5dQZDw+usBzYv4yB2hfvqpWxw==}
 
+  '@illumiarq/adapters@1.1.1':
+    resolution: {integrity: sha512-GERsTZStQWbi3vvVl0RAFVUJoiZTHOvwPtguU7A6QIdTmaItqwogq7l0IlP4l8mjnddupYQejho85lglHe32RQ==}
+
   '@illumiarq/auth-starter@1.0.1':
     resolution: {integrity: sha512-U9ty4uuGfSc2KH2/9pN/yirhqrO8hg1PvT8ePAWtyAVCdAkb8pZKvbP99pgl7AGEctkYiSmVit9o9D20AHTLVw==}
 
@@ -2277,8 +2280,8 @@ packages:
     resolution: {integrity: sha512-+nagKAuAb5y9YgzLgidCKwzvZaqqt8kNGbI+TLkHAksmyLY4ieXlx43LwRKjw3jm59BbS8xaypx0yYmZL2Qdqg==}
     hasBin: true
 
-  '@illumiarq/lumis@1.2.5':
-    resolution: {integrity: sha512-OkYyVL4AwEsqi5RTi3U9lvN4WLzvBnShJ/jiJC+efiwbEiWtxWQ9Rmi11hzQBjYVa9m0WP/I16P9lKM77SIwaA==}
+  '@illumiarq/lumis@1.2.7':
+    resolution: {integrity: sha512-CJR+BXTlFVbSA7jBSUVev7vBtW1cSDXgN1hjwrPoEfAqF7ozNOENLhYS0EtNpqQ0yCYY3Jyfr80konQaoSqnOw==}
     hasBin: true
 
   '@illumiarq/migrations@1.0.0':
@@ -2352,6 +2355,14 @@ packages:
 
   '@illumiarq/veil@1.0.2':
     resolution: {integrity: sha512-XmvoVugCmGAqLu07B87MeRYaZ6oNKY13wLNCKo5eJhvhPJeEBoeS/fI4XwGWrrF2dEJeMZT4jp9HFwA+AZ8ipw==}
+    peerDependencies:
+      alpinejs: ^3.13.0
+    peerDependenciesMeta:
+      alpinejs:
+        optional: true
+
+  '@illumiarq/veil@1.0.3':
+    resolution: {integrity: sha512-MtllinCKaKyYzjp1N4SDrcF/wB9AYY7eA2JXFliVNARFi5y9r8DeW3yCaLVhLLA9zQ3e/CDsv1xG8tAC+I1nrQ==}
     peerDependencies:
       alpinejs: ^3.13.0
     peerDependenciesMeta:
@@ -6456,6 +6467,14 @@ snapshots:
       '@illumiarq/runtime': 1.1.1
       hono: 4.12.8
 
+  '@illumiarq/adapters@1.1.1':
+    dependencies:
+      '@hono/node-server': 1.19.11(hono@4.12.8)
+      '@illumiarq/build': 1.0.0
+      '@illumiarq/core': 1.1.0
+      '@illumiarq/runtime': 1.1.1
+      hono: 4.12.8
+
   '@illumiarq/auth-starter@1.0.1':
     dependencies:
       '@illumiarq/support': 1.0.0
@@ -6565,12 +6584,12 @@ snapshots:
     transitivePeerDependencies:
       - alpinejs
 
-  '@illumiarq/lumis@1.2.5(alpinejs@3.15.8)':
+  '@illumiarq/lumis@1.2.7(alpinejs@3.15.8)':
     dependencies:
-      '@illumiarq/adapters': 1.1.0
+      '@illumiarq/adapters': 1.1.1
       '@illumiarq/auth-starter': 1.0.1
       '@illumiarq/search': 1.0.1
-      '@illumiarq/veil': 1.0.2(alpinejs@3.15.8)
+      '@illumiarq/veil': 1.0.3(alpinejs@3.15.8)
       '@lumiarq/lumis': 1.2.0
     transitivePeerDependencies:
       - alpinejs
@@ -6705,6 +6724,10 @@ snapshots:
       alpinejs: 3.15.8
 
   '@illumiarq/veil@1.0.2(alpinejs@3.15.8)':
+    optionalDependencies:
+      alpinejs: 3.15.8
+
+  '@illumiarq/veil@1.0.3(alpinejs@3.15.8)':
     optionalDependencies:
       alpinejs: 3.15.8
 
@@ -6882,7 +6905,7 @@ snapshots:
 
   '@lumiarq/framework@1.0.1(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13(@typescript-eslint/types@8.59.0))(vue@3.5.30(typescript@5.9.3))':
     dependencies:
-      '@illumiarq/adapters': 1.1.0
+      '@illumiarq/adapters': 1.1.1
       '@illumiarq/auth': 1.0.0
       '@illumiarq/build': 1.0.0
       '@illumiarq/cache': 1.1.0

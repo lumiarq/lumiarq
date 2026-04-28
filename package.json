@@ -37,13 +37,13 @@
     ]
   },
   "dependencies": {
-    "@illumiarq/adapters": "^1.1.0",
+    "@illumiarq/adapters": "^1.1.1",
     "@lumiarq/framework": "^1.0.1",
     "@trazze/ignite": "^0.1.0",
     "drizzle-orm": "^0.45.1"
   },
   "devDependencies": {
-    "@illumiarq/lumis": "^1.2.5",
+    "@illumiarq/lumis": "^1.2.7",
     "@lumiarq/eslint-plugin": "^1.0.0",
     "@lumiarq/prettier-plugin-veil": "^1.0.0",
     "@tailwindcss/cli": "^4.2.2",
