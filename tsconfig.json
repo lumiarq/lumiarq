@@ -11,15 +11,15 @@
       "@/modules/*": ["./src/modules/*"],
       "@/shared/*": ["./src/shared/*"],
       "@/bootstrap/*": ["./bootstrap/*"],
-      "@/storage/*": ["./storage/*"],
-      "@/config/*": ["./config/*"],
-      "@/tests/*": ["./tests/*"],
-      "@/lang/*": ["./lang/*"]
+      "@/storage/*": ["./src/storage/*"],
+      "@/config/*": ["./src/config/*"],
+      "@/tests/*": ["./src/tests/*"],
+      "@/lang/*": ["./src/lang/*"]
     },
     "outDir": "./dist",
     "rootDir": ".",
     "skipLibCheck": true
   },
-  "include": ["src", "src/modules", "src/shared", "bootstrap", "storage", "config", "tests", "lang"],
+  "include": ["src", "src/modules", "src/shared", "bootstrap"],
   "exclude": ["node_modules", "dist"]
 }

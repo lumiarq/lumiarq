@@ -1,5 +1,3 @@
-console.log('ENTRY START')
-
 import { boot } from "@lumiarq/framework"
 import { handleIgnitionError } from "@trazze/ignite"
 
@@ -25,6 +23,8 @@ import "@/storage/framework/cache/routes.loader"
  *   --target cloudflare: createCloudflareAdapter(app)  → { fetch: handler }
  *   --target static:     createStaticAdapter(app)      → prerender pipeline
  */
+
+console.log(handleIgnitionError) // Ensure it's included in the bundle for all targets, even if not used in this file.
 export default boot({
   onError: handleIgnitionError,
 })

@@ -5,8 +5,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "node",
-    setupFiles: ["./tests/setup.ts"],
-    include: ["src/modules/**/tests/**/*.test.ts", "tests/**/*.test.ts"],
+    setupFiles: ["./src/tests/setup.ts"],
+    include: ["src/modules/**/tests/**/*.test.ts", "src/tests/**/*.test.ts"],
     coverage: {
       provider: "v8",
       reporter: ["text", "lcov"],
@@ -24,8 +24,9 @@ export default defineConfig({
       "@/modules": resolve(__dirname, "src/modules"),
       "@/shared": resolve(__dirname, "src/shared"),
       "@/bootstrap": resolve(__dirname, "bootstrap"),
-      "@/config": resolve(__dirname, "config"),
-      "@/lang": resolve(__dirname, "lang"),
+      "@/config": resolve(__dirname, "src/config"),
+      "@/lang": resolve(__dirname, "src/lang"),
+      "@/storage": resolve(__dirname, "src/storage"),
     },
   },
 })

@@ -25,7 +25,7 @@ import type { DocFrontmatter } from "@/modules/Docs/contracts/types/docs.types"
 // ── Config ────────────────────────────────────────────────────────────────────
 
 const CACHE_TTL_MS = 5 * 60 * 1_000 // 5 minutes — refetch from GitHub after this
-const CACHE_ROOT = resolve(process.cwd(), "storage/docs-cache")
+const CACHE_ROOT = resolve(process.cwd(), "src/storage/docs-cache")
 const RAW_BASE = "https://raw.githubusercontent.com"
 
 // The docs manifest lives at the root of the docs repo as `docs.json`.
@@ -136,7 +136,7 @@ export function getDocsLoader(version: string) {
   if (loaderCache.has(version)) return loaderCache.get(version)!
 
   const loader = defineContentLoader({
-    directory: join("storage/docs-cache", version),
+    directory: join("src/storage/docs-cache", version),
     schema: DocsFrontmatterSchema,
     highlight: true,
   })
