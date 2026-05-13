@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-# Drop Co-authored-by trailers (e.g. from IDE) so GitHub credits stay human-only.
+# Strip Co-authored-by trailers (IDE-injected) so GitHub credits stay human-only.
 test -f "$1" || exit 0
 tmp="$1.strip-coauthor.$$"
-if grep -vi '^co-authored-by:' "$1" >"$tmp" 2>/dev/null; then
+if perl -ne 'print unless /^Co-Authored-By:/i' "$1" >"$tmp" 2>/dev/null; then
   mv "$tmp" "$1"
 else
   rm -f "$tmp"
