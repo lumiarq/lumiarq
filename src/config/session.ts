@@ -1,6 +1,5 @@
 import { type SessionConfig } from "@lumiarq/framework"
 import { env } from "../../bootstrap/env"
-import { app } from "@lumiarq/framework"
 
 export default {
   driver: env.SESSION_DRIVER ?? "database",
@@ -9,6 +8,6 @@ export default {
     name: "lumiarq_session",
     httpOnly: true,
     sameSite: "Lax",
-    secure: app().isProduction(),
+    secure: env.APP_ENV === "production",
   },
 } satisfies SessionConfig

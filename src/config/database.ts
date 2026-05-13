@@ -1,6 +1,5 @@
 import type { DatabaseConfig } from "@lumiarq/framework"
 import { env } from "@/bootstrap/env"
-import { app } from "@lumiarq/framework"
 
 export default {
   default: env.DB_CONNECTION ?? "sqlite",
@@ -17,7 +16,7 @@ export default {
       database: env.DB_DATABASE ?? "",
       username: env.DB_USERNAME ?? "",
       password: env.DB_PASSWORD ?? "",
-      ssl: app().isProduction(),
+      ssl: env.APP_ENV === "production",
       pool: {
         min: 2,
         max: 10,

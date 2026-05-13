@@ -7,7 +7,7 @@
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:node",
     "build:vercel": "pnpm lumis route:cache && pnpm lumis view:cache && pnpm lumis search:index && pnpm run build:css && pnpm run build:vercel-bundle",
-    "build:vercel-bundle": "esbuild bootstrap/vercel.ts --bundle --platform=node --target=node20 --format=esm --outfile=api/index.js --tsconfig=tsconfig.json",
+    "build:vercel-bundle": "esbuild bootstrap/vercel.ts --bundle --platform=node --target=node20 --format=esm --outfile=api/index.js --packages=external --tsconfig=tsconfig.json",
     "dev": "lumis serve",
     "build:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --minify",
     "dev:css": "tailwindcss -i src/shared/ui/assets/input.css -o src/shared/ui/assets/style.css --watch",
