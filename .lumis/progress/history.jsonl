@@ -1,0 +1,6 @@
+{"event":"phase_started","phase":"Phase 0","scope":"lumiarq","branch":"main","intent":"Unblock production — fix Vercel deployment errors","timestamp":"2026-05-13T00:00:00Z"}
+{"event":"step_completed","step":"P0-1 fix vercel.json","files":["vercel.json"],"commit":"06c8b05","evidence":"Removed invalid runtime key from functions block","timestamp":"2026-05-13T00:00:00Z"}
+{"event":"step_completed","step":"P0-1 fix app() usage and --packages=external","files":["src/config/logging.ts","src/config/session.ts","src/config/database.ts","package.json"],"commit":"f85495d","evidence":"Replaced app().isProduction()/isLocal() with env.APP_ENV; added --packages=external to build:vercel-bundle","timestamp":"2026-05-13T00:00:00Z"}
+{"event":"gate_passed","gate":"vercel deploy --prod","evidence":"https://vercel.com/ifeadewunmis-projects/lumiarq/Awhg1tPemXDGJyUZW6gss9UqHhqs","timestamp":"2026-05-13T00:00:00Z"}
+{"event":"step_completed","step":"P0-2 activate progress tracking","files":[".lumis/progress/current.json",".lumis/progress/history.jsonl",".lumis/progress/decisions.md"],"evidence":"Progress artifacts created","timestamp":"2026-05-14T00:00:00Z"}
+{"event":"gate_passed","gate":"Phase 0 complete","evidence":"Both P0-1 and P0-2 exit gates satisfied","timestamp":"2026-05-14T00:00:00Z"}

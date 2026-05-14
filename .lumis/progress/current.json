@@ -1,0 +1,32 @@
+{
+  "scope": "lumiarq",
+  "branch": "main",
+  "phase": "Phase 0",
+  "wave": "P0-1 + P0-2",
+  "status": "completed",
+  "startedAt": "2026-05-13T00:00:00Z",
+  "completedAt": "2026-05-14T00:00:00Z",
+  "intent": "Unblock production: fix Vercel deployment errors and activate progress tracking",
+  "files": [
+    "vercel.json",
+    "src/config/logging.ts",
+    "src/config/session.ts",
+    "src/config/database.ts",
+    "package.json",
+    ".lumis/progress/current.json",
+    ".lumis/progress/history.jsonl",
+    ".lumis/progress/decisions.md"
+  ],
+  "verification": {
+    "deploy": "https://vercel.com/ifeadewunmis-projects/lumiarq/Awhg1tPemXDGJyUZW6gss9UqHhqs",
+    "commitSha": "f85495d",
+    "gates": [
+      "vercel deploy --prod → green",
+      "app() → env.APP_ENV migration complete",
+      "--packages=external added to build:vercel-bundle",
+      ".lumis/progress/current.json present"
+    ]
+  },
+  "rollbackPlan": "Revert to commit 06c8b05 if Vercel deployment regresses",
+  "nextAction": "Start Wave 1 — run lumiarq-wave1-baseline-hardening skill"
+}
