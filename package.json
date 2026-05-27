@@ -40,17 +40,32 @@
       "vue-demi"
     ],
     "overrides": {
-      "@illumiarq/core": "1.1.1",
-      "@illumiarq/http": "1.1.4",
-      "@illumiarq/runtime": "1.1.4",
-      "@illumiarq/security": "1.0.1"
+      "@illumiarq/adapters": "1.1.5",
+      "@illumiarq/auth": "1.1.5",
+      "@illumiarq/build": "1.1.5",
+      "@illumiarq/cache": "1.1.5",
+      "@illumiarq/context": "1.1.5",
+      "@illumiarq/contracts": "1.1.5",
+      "@illumiarq/core": "1.1.5",
+      "@illumiarq/database": "1.1.5",
+      "@illumiarq/filesystem": "0.1.1",
+      "@illumiarq/http": "1.1.5",
+      "@illumiarq/key-value-storage": "0.1.1",
+      "@illumiarq/migrations": "1.1.5",
+      "@illumiarq/modules": "1.1.5",
+      "@illumiarq/query": "1.1.5",
+      "@illumiarq/runtime": "1.1.5",
+      "@illumiarq/security": "1.1.5",
+      "@illumiarq/testing": "1.1.5",
+      "@illumiarq/veil": "1.0.6",
+      "@lumiarq/framework": "1.0.6"
     }
   },
   "dependencies": {
-    "@illumiarq/adapters": "^1.1.1",
-    "@illumiarq/http": "^1.1.4",
-    "@illumiarq/runtime": "^1.1.4",
-    "@lumiarq/framework": "^1.0.4",
+    "@illumiarq/adapters": "^1.1.5",
+    "@illumiarq/http": "^1.1.5",
+    "@illumiarq/runtime": "^1.1.5",
+    "@lumiarq/framework": "^1.0.6",
     "@trazze/ignite": "^0.1.0",
     "drizzle-orm": "^0.45.1"
   },
