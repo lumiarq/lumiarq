@@ -18,7 +18,7 @@ export async function get(
   path: string,
   options: { token?: string; headers?: Record<string, string> } = {},
 ): Promise<Response> {
-  return app.router.fetch(
+  return asRouterFetch(app).fetch(
     new Request(`http://localhost${path}`, {
       method: "GET",
       headers: buildHeaders(options),
@@ -32,7 +32,7 @@ export async function post(
   body: unknown,
   options: { token?: string; headers?: Record<string, string> } = {},
 ): Promise<Response> {
-  return app.router.fetch(
+  return asRouterFetch(app).fetch(
     new Request(`http://localhost${path}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...buildHeaders(options) },
@@ -56,4 +56,8 @@ function buildHeaders(options: { token?: string; headers?: Record<string, string
     ...(options.token ? { Authorization: `Bearer ${options.token}` } : {}),
     ...(options.headers ?? {}),
   }
+}
+
+function asRouterFetch(app: LumiARQApp): { fetch(req: Request): Promise<Response> } {
+  return app.router as unknown as { fetch(req: Request): Promise<Response> }
 }
