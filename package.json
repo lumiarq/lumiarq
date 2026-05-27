@@ -55,7 +55,7 @@
     "drizzle-orm": "^0.45.1"
   },
   "devDependencies": {
-    "@illumiarq/lumis": "^1.2.9",
+    "@illumiarq/lumis": "^1.2.11",
     "@lumiarq/eslint-plugin": "^1.0.0",
     "@lumiarq/prettier-plugin-veil": "^1.0.0",
     "@tailwindcss/cli": "^4.2.2",
