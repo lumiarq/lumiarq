@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.32.0",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:node",
     "build:vercel": "pnpm lumis route:cache && pnpm lumis view:cache && pnpm lumis search:index && pnpm run build:css && pnpm run build:vercel-bundle",
@@ -35,16 +38,24 @@
       "esbuild",
       "argon2",
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "@illumiarq/core": "1.1.1",
+      "@illumiarq/http": "1.1.4",
+      "@illumiarq/runtime": "1.1.4",
+      "@illumiarq/security": "1.0.1"
+    }
   },
   "dependencies": {
     "@illumiarq/adapters": "^1.1.1",
-    "@lumiarq/framework": "^1.0.1",
+    "@illumiarq/http": "^1.1.4",
+    "@illumiarq/runtime": "^1.1.4",
+    "@lumiarq/framework": "^1.0.4",
     "@trazze/ignite": "^0.1.0",
     "drizzle-orm": "^0.45.1"
   },
   "devDependencies": {
-    "@illumiarq/lumis": "^1.2.8",
+    "@illumiarq/lumis": "^1.2.9",
     "@lumiarq/eslint-plugin": "^1.0.0",
     "@lumiarq/prettier-plugin-veil": "^1.0.0",
     "@tailwindcss/cli": "^4.2.2",
