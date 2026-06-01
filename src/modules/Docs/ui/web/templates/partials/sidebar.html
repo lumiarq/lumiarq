@@ -10,7 +10,7 @@
   <select id="version-switcher" class="version-select"
           onchange="window.location.pathname = '/docs/' + this.value">
     <% versions.forEach(function(v) { %>
-    <option value="<%= v %>"<%= v === activeVersion ? ' selected' : '' %>><%= v %></option>
+    <option value="<%= v %>" <% if (v === activeVersion) { %>selected<% } %>><%= v %></option>
     <% }) %>
   </select>
 </div>

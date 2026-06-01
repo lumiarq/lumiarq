@@ -5,39 +5,41 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@illumiarq/adapters': 1.1.5
+  '@illumiarq/adapters': 1.2.0
   '@illumiarq/auth': 1.1.5
   '@illumiarq/build': 1.1.5
   '@illumiarq/cache': 1.1.5
   '@illumiarq/context': 1.1.5
-  '@illumiarq/contracts': 1.1.5
+  '@illumiarq/contracts': 1.2.0
   '@illumiarq/core': 1.1.5
   '@illumiarq/database': 1.1.5
   '@illumiarq/filesystem': 0.1.1
   '@illumiarq/http': 1.1.5
   '@illumiarq/key-value-storage': 0.1.1
+  '@illumiarq/lumis': 1.3.0
   '@illumiarq/migrations': 1.1.5
   '@illumiarq/modules': 1.1.5
   '@illumiarq/query': 1.1.5
-  '@illumiarq/runtime': 1.1.5
+  '@illumiarq/runtime': 1.2.0
   '@illumiarq/security': 1.1.5
-  '@illumiarq/testing': 1.1.5
+  '@illumiarq/testing': 1.2.0
   '@illumiarq/veil': 1.0.6
   '@lumiarq/framework': 1.0.6
+  '@lumiarq/lumis': 1.2.0
 
 importers:
 
   .:
     dependencies:
       '@illumiarq/adapters':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/http':
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/runtime':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@lumiarq/framework':
         specifier: 1.0.6
         version: 1.0.6(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))
@@ -48,9 +50,12 @@ importers:
         specifier: ^0.45.1
         version: 0.45.1(@libsql/client@0.17.0)(gel@2.2.0)
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.1
+        version: 9.39.4
       '@illumiarq/lumis':
-        specifier: ^1.2.11
-        version: 1.2.11(alpinejs@3.15.8)
+        specifier: 1.3.0
+        version: 1.3.0(alpinejs@3.15.8)
       '@lumiarq/eslint-plugin':
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.39.4(jiti@2.6.1))
@@ -66,6 +71,12 @@ importers:
       '@types/node':
         specifier: ^22.19.17
         version: 22.19.17
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.46.2
+        version: 8.59.0(@typescript-eslint/parser@8.59.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.46.2
+        version: 8.59.0(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       '@vitest/coverage-v8':
         specifier: ^1.4.0
         version: 1.6.1(vitest@1.6.1(@types/node@22.19.17)(lightningcss@1.32.0))
@@ -94,8 +105,8 @@ importers:
   ../framework:
     dependencies:
       '@illumiarq/adapters':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/auth':
         specifier: 1.1.5
         version: 1.1.5
@@ -109,8 +120,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/core':
         specifier: 1.1.5
         version: 1.1.5
@@ -136,11 +147,11 @@ importers:
         specifier: 1.1.5
         version: 1.1.5(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))
       '@illumiarq/runtime':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/testing':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/tinker':
         specifier: ^1.0.0
         version: 1.0.0
@@ -148,7 +159,7 @@ importers:
         specifier: 1.0.6
         version: 1.0.6(alpinejs@3.15.8)
       '@lumiarq/lumis':
-        specifier: ^1.1.0
+        specifier: 1.2.0
         version: 1.2.0
       '@trazze/sdk':
         specifier: ^0.1.0
@@ -194,12 +205,15 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/runtime':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       hono:
         specifier: ^4.12.7
         version: 4.12.8
     devDependencies:
+      '@illumiarq/testing':
+        specifier: 1.2.0
+        version: 1.2.0
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.15
@@ -282,8 +296,8 @@ importers:
   ../framework/packages/illumiarq/cache:
     dependencies:
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
     devDependencies:
       '@types/ioredis':
         specifier: ^5.0.0
@@ -394,8 +408,8 @@ importers:
   ../framework/packages/illumiarq/filesystem:
     dependencies:
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
@@ -429,8 +443,8 @@ importers:
   ../framework/packages/illumiarq/key-value-storage:
     dependencies:
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/filesystem':
         specifier: 0.1.1
         version: 0.1.1
@@ -448,8 +462,8 @@ importers:
   ../framework/packages/illumiarq/lumis:
     dependencies:
       '@illumiarq/adapters':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/auth-starter':
         specifier: workspace:*
         version: link:../auth-starter
@@ -460,7 +474,7 @@ importers:
         specifier: 1.0.6
         version: 1.0.6(alpinejs@3.15.8)
       '@lumiarq/lumis':
-        specifier: ^1.2.0
+        specifier: 1.2.0
         version: 1.2.0
     devDependencies:
       '@types/node':
@@ -501,8 +515,8 @@ importers:
   ../framework/packages/illumiarq/modules:
     dependencies:
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
@@ -566,8 +580,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/core':
         specifier: 1.1.5
         version: 1.1.5
@@ -581,8 +595,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/testing':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@trazze/sdk':
         specifier: ^0.1.0
         version: 0.1.0
@@ -685,8 +699,8 @@ importers:
         specifier: 1.1.5
         version: 1.1.5
       '@illumiarq/contracts':
-        specifier: 1.1.5
-        version: 1.1.5
+        specifier: 1.2.0
+        version: 1.2.0
       '@illumiarq/core':
         specifier: 1.1.5
         version: 1.1.5
@@ -1051,7 +1065,7 @@ importers:
         specifier: 1.0.6
         version: 1.0.6(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))
       '@lumiarq/pack-lumiarq':
-        specifier: ^1.0.0
+        specifier: ^1.0.1
         version: 1.0.1
       '@tanstack/react-query':
         specifier: ^5.83.0
@@ -1076,8 +1090,8 @@ importers:
         version: 0.38.4(@libsql/client@0.17.0)(@types/react@19.2.14)(react@19.2.4)
     devDependencies:
       '@illumiarq/lumis':
-        specifier: ^1.2.11
-        version: 1.2.11(alpinejs@3.15.8)
+        specifier: 1.3.0
+        version: 1.3.0(alpinejs@3.15.8)
       '@tailwindcss/cli':
         specifier: ^4.1.0
         version: 4.2.2
@@ -2302,8 +2316,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@illumiarq/adapters@1.1.5':
-    resolution: {integrity: sha512-sky+j8oAk2SWIX14BrbQ06NUYNbvcdOd+BesxNtAAiKw/TeaHh0H2Kke+fSLUZPlcZuvFp5nMzt/YkGsGrJhtg==}
+  '@illumiarq/adapters@1.2.0':
+    resolution: {integrity: sha512-PwkoL4oQOcvwxFY103JK3RPwUfwhvxv0W+LJUq45Dhve8Eb2pUrCcW2KJ3JzBboL1bjZlxq+kuCVwiR0B6jhpA==}
 
   '@illumiarq/auth@1.1.5':
     resolution: {integrity: sha512-GD0cIJrkZUGdASOpgFPJUiHjNNRJKIZohHZfce2yJIay4/8kEox4LGTns2TFmsNuui3BsinlJFAGOfr7qAeb6A==}
@@ -2317,8 +2331,8 @@ packages:
   '@illumiarq/context@1.1.5':
     resolution: {integrity: sha512-lQ/UKTyCKbMPjU2wVjAAzc4qJ9S+dEnAhbhKnB0FxVYsO8+WK7G0Dh5TH5qcKeYeIBrdlpaK07mNpFZtBjcklA==}
 
-  '@illumiarq/contracts@1.1.5':
-    resolution: {integrity: sha512-NTSEa4sEXHr8PplQPPddfm6h89Sf8lrhUDYwX44JE3lmB2ElPS3CR1+HHWguB2Uy83HK5ibw9y1QU+69wJh01Q==}
+  '@illumiarq/contracts@1.2.0':
+    resolution: {integrity: sha512-m12sK1MzaDQ2T0F9ZJdbqCF//HMg8s34H4EtUk+9D05skUwyreQtdcyz+YuoL5J+kCkZuLgDoC/980eAzfsq8w==}
 
   '@illumiarq/core@1.1.5':
     resolution: {integrity: sha512-BsKkvm3FvOHame1EApM8om3kHrvCE69DyaYx889hPxU0cCUWzaLyWBPxZsSgEI2K2IzkYSf3UVOpaaw73oMrPg==}
@@ -2335,8 +2349,8 @@ packages:
   '@illumiarq/key-value-storage@0.1.1':
     resolution: {integrity: sha512-P29uZR/eYq0wkQq9fPNE1IxVx0eKW1HexoG40CpsPmFOVDFi/CI/4ZIbC+QkGs65BEGkL/pVGHgZgww8j//Vtw==}
 
-  '@illumiarq/lumis@1.2.11':
-    resolution: {integrity: sha512-7SWmbcnhDILmYY8PBuiBA3bNGhyiv6EnYUKORCUnj0DdiAyv2DW0aApy+e1sXxd/JxSmhnthDn6BXq6wT0GxVQ==}
+  '@illumiarq/lumis@1.3.0':
+    resolution: {integrity: sha512-XN7yfybQhOTKt7AOQ7TF69rTZDLx6zuIxOtu9Rat2DD3TvGgO+ClBwpBYZfbaf4MUoGTKcqz0w5FktCIaoAXYQ==}
     hasBin: true
 
   '@illumiarq/migrations@1.1.5':
@@ -2368,14 +2382,14 @@ packages:
       vue:
         optional: true
 
-  '@illumiarq/runtime@1.1.5':
-    resolution: {integrity: sha512-428LNQJ2N8LYu7p68Nrwh5xZ8d1d0UI0E+JU488Q/K3rPG+hVEv/j8gO9XupCU67cSp8VzohPGA6XOVuLV9B/g==}
+  '@illumiarq/runtime@1.2.0':
+    resolution: {integrity: sha512-Z5BdVlt41QhX/KmKAjfH3kVFSMNpza+bmvFRxTzVgaNBnm8dzZTOKxMqlX7WSI9uF9Yk/3WllRL55KFYPiqnXg==}
 
   '@illumiarq/security@1.1.5':
     resolution: {integrity: sha512-BVHLQhNZKIzR1bfKgpqftYs5BFGQ5UlLErJk64NegaVcjgfqx5SD3slQzwhde/+urL/j4oUrhApNKQMiSmnzUw==}
 
-  '@illumiarq/testing@1.1.5':
-    resolution: {integrity: sha512-yM80PZ7vxEWMxCb3mYeECrsfO+633u4ofp4G/LU98TJtQxVY1xiPEZHDNqKsd6l05epkETfSsTfmtl68PWQ2lA==}
+  '@illumiarq/testing@1.2.0':
+    resolution: {integrity: sha512-3hsem35U3vCBB8bEVbC7w36HfWQ6o9wBobF3rvmCUG08pg2bmpBYrrtNyLtuAv1dPfBtB3KKyeveJv2EIbvFWQ==}
 
   '@illumiarq/tinker@1.0.0':
     resolution: {integrity: sha512-zKN+mfSer2LBYhDLC3J0FJhmtelyr/T/8bpyq+pBsv3xk2DHjz1ZIGNuVEa6ne24mwSoOG/T+Oc3S8ZSAzfJoA==}
@@ -6482,12 +6496,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@illumiarq/adapters@1.1.5':
+  '@illumiarq/adapters@1.2.0':
     dependencies:
       '@hono/node-server': 1.19.11(hono@4.12.8)
       '@illumiarq/build': 1.1.5
       '@illumiarq/core': 1.1.5
-      '@illumiarq/runtime': 1.1.5
+      '@illumiarq/runtime': 1.2.0
       hono: 4.12.8
 
   '@illumiarq/auth@1.1.5':
@@ -6502,13 +6516,13 @@ snapshots:
 
   '@illumiarq/cache@1.1.5':
     dependencies:
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
 
   '@illumiarq/context@1.1.5':
     dependencies:
       '@illumiarq/core': 1.1.5
 
-  '@illumiarq/contracts@1.1.5': {}
+  '@illumiarq/contracts@1.2.0': {}
 
   '@illumiarq/core@1.1.5':
     dependencies:
@@ -6561,7 +6575,7 @@ snapshots:
 
   '@illumiarq/filesystem@0.1.1':
     dependencies:
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
 
   '@illumiarq/http@1.1.5':
     dependencies:
@@ -6571,12 +6585,12 @@ snapshots:
 
   '@illumiarq/key-value-storage@0.1.1':
     dependencies:
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
       '@illumiarq/filesystem': 0.1.1
 
-  '@illumiarq/lumis@1.2.11(alpinejs@3.15.8)':
+  '@illumiarq/lumis@1.3.0(alpinejs@3.15.8)':
     dependencies:
-      '@illumiarq/adapters': 1.1.5
+      '@illumiarq/adapters': 1.2.0
       '@illumiarq/auth-starter': link:../framework/packages/illumiarq/auth-starter
       '@illumiarq/search': link:../framework/packages/illumiarq/search
       '@illumiarq/veil': 1.0.6(alpinejs@3.15.8)
@@ -6622,7 +6636,7 @@ snapshots:
 
   '@illumiarq/modules@1.1.5':
     dependencies:
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
 
   '@illumiarq/query@1.1.5(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))':
     dependencies:
@@ -6637,15 +6651,15 @@ snapshots:
       svelte: 5.53.13
       vue: 3.5.30(typescript@5.9.3)
 
-  '@illumiarq/runtime@1.1.5':
+  '@illumiarq/runtime@1.2.0':
     dependencies:
       '@illumiarq/context': 1.1.5
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
       '@illumiarq/core': 1.1.5
       '@illumiarq/http': 1.1.5
       '@illumiarq/modules': 1.1.5
       '@illumiarq/security': 1.1.5
-      '@illumiarq/testing': 1.1.5
+      '@illumiarq/testing': 1.2.0
       '@trazze/sdk': 0.1.0
       fast-json-stable-stringify: 2.1.0
       hono: 4.12.8
@@ -6654,10 +6668,10 @@ snapshots:
     dependencies:
       '@illumiarq/core': 1.1.5
 
-  '@illumiarq/testing@1.1.5':
+  '@illumiarq/testing@1.2.0':
     dependencies:
       '@illumiarq/context': 1.1.5
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
       '@illumiarq/core': 1.1.5
 
   '@illumiarq/tinker@1.0.0': {}
@@ -6781,12 +6795,12 @@ snapshots:
 
   '@lumiarq/framework@1.0.6(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(@types/react@19.2.14)(alpinejs@3.15.8)(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))':
     dependencies:
-      '@illumiarq/adapters': 1.1.5
+      '@illumiarq/adapters': 1.2.0
       '@illumiarq/auth': 1.1.5
       '@illumiarq/build': 1.1.5
       '@illumiarq/cache': 1.1.5
       '@illumiarq/context': 1.1.5
-      '@illumiarq/contracts': 1.1.5
+      '@illumiarq/contracts': 1.2.0
       '@illumiarq/core': 1.1.5
       '@illumiarq/database': 1.1.5(@types/react@19.2.14)(react@19.2.4)
       '@illumiarq/filesystem': 0.1.1
@@ -6795,8 +6809,8 @@ snapshots:
       '@illumiarq/migrations': 1.1.5(@types/react@19.2.14)(react@19.2.4)
       '@illumiarq/modules': 1.1.5
       '@illumiarq/query': 1.1.5(@tanstack/react-query@5.90.21(react@19.2.4))(@tanstack/solid-query@5.90.26(solid-js@1.9.11))(@tanstack/vue-query@5.92.9(vue@3.5.30(typescript@5.9.3)))(react@19.2.4)(svelte@5.53.13)(vue@3.5.30(typescript@5.9.3))
-      '@illumiarq/runtime': 1.1.5
-      '@illumiarq/testing': 1.1.5
+      '@illumiarq/runtime': 1.2.0
+      '@illumiarq/testing': 1.2.0
       '@illumiarq/tinker': 1.0.0
       '@illumiarq/veil': 1.0.6(alpinejs@3.15.8)
       '@lumiarq/lumis': 1.2.0

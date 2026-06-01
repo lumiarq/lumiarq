@@ -20,7 +20,6 @@ import { join, resolve } from "node:path"
 import { defineContentLoader } from "@lumiarq/framework"
 import { z } from "zod"
 import { env } from "@/bootstrap/env"
-import type { DocFrontmatter } from "@/modules/Docs/contracts/types/docs.types"
 
 // ── Config ────────────────────────────────────────────────────────────────────
 

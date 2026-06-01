@@ -3,7 +3,7 @@ import type { WelcomePageProps } from "@/modules/Welcome/contracts/types/welcome
 import { WelcomePageTemplate } from "@/modules/Welcome/ui/web/welcome.page"
 import appConfig from "@/config/app"
 
-export const WelcomeHandler = defineHandler(async (ctx: any) => {
+export const WelcomeHandler = defineHandler(async (ctx) => {
   return ctx.html(
     WelcomePageTemplate({
       version: "1.0.0",

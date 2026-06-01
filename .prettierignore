@@ -3,3 +3,12 @@ node_modules
 out
 public
 *.md
+.arc
+api
+src/storage/framework/cache
+src/storage/framework/reports
+src/storage/docs-cache
+src/shared/ui/assets/style.css
+src/shared/ui/assets/docs.js
+**/*.veil.html
+src/**/ui/web/templates

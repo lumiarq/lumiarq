@@ -1,5 +1,3 @@
-import { withTestContext } from "@lumiarq/framework/runtime"
-
 export interface TestAuthOptions {
   userId?: string
   identityId?: string
