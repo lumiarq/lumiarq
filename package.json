@@ -51,7 +51,7 @@
       "@illumiarq/filesystem": "0.1.1",
       "@illumiarq/http": "1.1.5",
       "@illumiarq/key-value-storage": "0.1.1",
-      "@illumiarq/lumis": "1.3.0",
+      "@illumiarq/lumis": "1.3.2",
       "@illumiarq/migrations": "1.1.5",
       "@illumiarq/modules": "1.1.5",
       "@illumiarq/query": "1.1.5",
@@ -60,7 +60,8 @@
       "@illumiarq/testing": "1.2.0",
       "@illumiarq/veil": "1.0.6",
       "@lumiarq/framework": "1.0.6",
-      "@lumiarq/lumis": "1.2.0"
+      "@lumiarq/lumis": "1.2.12",
+      "@lumiarq/agent": "1.1.1"
     }
   },
   "dependencies": {
@@ -73,7 +74,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@illumiarq/lumis": "^1.3.0",
+    "@illumiarq/lumis": "^1.3.2",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "@lumiarq/eslint-plugin": "^1.0.0",
