@@ -60,7 +60,7 @@
       "@illumiarq/testing": "1.2.0",
       "@illumiarq/veil": "1.0.6",
       "@lumiarq/framework": "1.0.6",
-      "@lumiarq/lumis": "1.2.14",
+      "@lumiarq/lumis": "1.2.15",
       "@lumiarq/agent": "1.1.1"
     }
   },
