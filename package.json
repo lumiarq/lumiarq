@@ -23,7 +23,7 @@
     "test": "vitest run --config pkg/vitest.config.ts",
     "test:watch": "vitest --config pkg/vitest.config.ts",
     "test:coverage": "vitest run --config pkg/vitest.config.ts --coverage",
-    "lint": "eslint src bootstrap --ext .ts",
+    "lint": "eslint src bootstrap --config pkg/eslint.config.mjs",
     "tc": "tsc --noEmit",
     "prepare": "husky",
     "format": "pnpm run format:bootstrap && pnpm run format:config && pnpm run format:src && pnpm run format:tests",

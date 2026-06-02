@@ -1,6 +1,0 @@
-{
-  "preferredRuntime": "ollama",
-  "paths": {
-    "storage": "src/storage"
-  }
-}
