@@ -51,7 +51,7 @@ jobs:
       - name: Supply-chain audit cache
         run: mkdir -p .lumis && (pnpm audit --json > .lumis/audit.json || true)
 
-      - name: Lumis doctor (strict supply-chain)
-        run: pnpm exec lumis doctor --strict-supply-chain
+      - name: Lumis doctor (strict security gate)
+        run: pnpm exec lumis doctor --strict
         env:
           CI: true

@@ -10,6 +10,12 @@ const config: LumisConfig = {
     maxVulnerabilities: 0,
     failOnSeverity: 'critical',
   },
+  runtime: {
+    policy: {
+      commandAllowlist: ['pnpm *', 'node *', 'lumis *', 'npx *'],
+      mode: 'strict',
+    },
+  },
 }
 
 export default config
